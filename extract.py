@@ -523,7 +523,7 @@ def extract_hexcodes(image_path):
             # Define regions of interest (ROI) for hair, skin, and lips
             hair_points = [156, 105, 110, 120]  # Example: hairline area
             skin_points = [31, 32, 33, 34, 35, 36, 100, 110, 120, 130, 150, 160, 148, 149, 152]  # Example: cheek and forehead areas
-            lips_points = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 38, 39, 40, 41, 42, 43, 44, 80, 82, 81, 83, 84, 146, 106]  # Example: lips area
+            lips_points = [11, 12, 13]  # Example: lips area
 
             # Visualize the bounding boxes for each region
             visualize_bounding_box(rgb_img, face_landmarks, hair_points, (255, 0, 0), "Hair", img)  # Red for hair
