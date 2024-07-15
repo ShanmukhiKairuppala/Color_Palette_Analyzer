@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("./static/uploads/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: rgb(237, 152, 77);
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            padding-left: 30px;
+            /* background-color: rgba(0, 0, 0, 0.3); */
+            border-radius: 10px;
+            text-align: center;
+        }
+        input[type="file"] { 
+            margin: 10px 0; 
+            box-sizing: border-box;
+            font-size: 18px;
+            color: aliceblue;
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: medium;
+            color: black;
+            border-radius: 5px;
+            border: none;
+        }
+        button:hover{
+            background-color: rgb(237, 152, 77);
+            color: white;
+            transition: 0.5s;
+        }
+        h1 {
+            padding-top: 50px;
+            
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(15, 15, 15, 0.6);
+        }
+        h2{
+            font-size: 1.4rem;
+            color: rgb(255, 255, 255);
+        }
+        p{
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: aliceblue;
+            /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); */
+        }
+    </style>
+</head>
+<body> 
+    <div>
+        
+         <h1 class="quote">Your style is a reflection of your personality; let your colors shine through...</h1 >
+        <h2>Get recommendations of clothing based on the colour palette.</h2>
+        <p>Upload an image to identify the colour palette based on facial features.</p>
+       
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><input type="file" name="image" accept="image/*" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Upload</button></td>
+                </tr>
+            </table>
+        
+        </form>
+    </div>
+</body>
+</html>
