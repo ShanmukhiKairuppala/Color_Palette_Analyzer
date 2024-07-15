@@ -141,7 +141,7 @@ def recommendations(best_palette):
     """
 
     # Save the HTML content to a file
-    html_file_path = r'D:\pvt\Myntra\MVP\filtered_products.html'  
+    html_file_path = r'D:\pvt\MVP\Display_filtered_products.html'  
     with open(html_file_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
@@ -290,7 +290,7 @@ def euclidean_distance(rgb1, rgb2):
     return np.sqrt(sum((p1 - p2) ** 2 for p1, p2 in zip(rgb1, rgb2)))
 
 
-image_path = 'D:\pvt\Myntra\MVP\image4.jpg'
+image_path = 'D:\pvt\MVP\image1.png'
 extract_hexcodes(image_path)
 
 
